@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Greek Food Blog</title>
+  <style>
+    /* Global styles */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: #f7f5f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #1f6fb2;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout */
+    header {
+      background: linear-gradient(135deg, #1f6fb2, #1b4f72);
+      color: #fff;
+      padding: 20px 40px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      font-size: 0.9rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 0 20px 40px;
+    }
+
+    /* Hero section */
+    .hero {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+      gap: 20px;
+    }
+
+    .hero-text h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      color: #1b4f72;
+    }
+
+    .hero-text p {
+      margin-bottom: 10px;
+    }
+
+    .hero-highlight {
+      font-weight: 600;
+      color: #b25c1f;
+    }
+
+    .hero-image {
+      background: url("https://upload.wikimedia.org/wikipedia/commons/6/68/Greek_food.jpg")
+        center/cover no-repeat;
+      border-radius: 10px;
+      min-height: 220px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image::after {
+      content: "Taste of Greece";
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(27, 79, 114, 0.85);
+      color: #fff;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      border-radius: 4px;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 30px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    section h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: #1b4f72;
+    }
+
+    section h3 {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: #b25c1f;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    /* Two-column list */
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    /* Highlight cards */
+    .card {
+      border-radius: 8px;
+      border: 1px solid #e0d7c7;
+      padding: 12px 14px;
+      background: #fbfaf7;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.05rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 18px 10px 26px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    footer span {
+      color: #1b4f72;
+      font-weight: 600;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 700px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 18px 20px;
+      }
+
+      .container {
+        padding: 0 16px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Greek Food Journey</h1>
+    <p>A simple blog exploring the flavors, stories, and traditions of Greek cuisine.</p>
+    <nav>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#ingredients">Key Ingredients</a></li>
+        <li><a href="#dishes">Iconic Dishes</a></li>
+        <li><a href="#street">Street Food</a></li>
+        <li><a href="#desserts">Desserts</a></li>
+        <li><a href="#tips">Eating Like a Local</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="intro">
+      <div class="hero-text">
+        <h2>Why Greek Food Feels Like Home</h2>
+        <p>
+          Greek cuisine is built on simple ingredients, bold flavors, and a deep sense of
+          hospitality. Meals are rarely just about eating—they’re about gathering, sharing,
+          and celebrating life.
+        </p>
+        <p>
+          From seaside tavernas to bustling city markets, Greek food balances
+          <span class="hero-highlight">fresh vegetables, olive oil, herbs, and grilled meats</span>
+          with comforting breads, cheeses, and slow-cooked dishes.
+        </p>
+        <p>
+          In this blog, we’ll walk through the essentials: ingredients, iconic dishes, street
+          food, and sweet endings—so you can taste Greece even if you’re cooking at home.
+        </p>
+      </div>
+      <div class="hero-image"></div>
+    </section>
+
+    <section id="ingredients">
+      <h2>Key Ingredients of Greek Cuisine</h2>
+      <p>
+        Greek food is Mediterranean at its core—light, fragrant, and focused on quality
+        ingredients rather than complicated techniques.
+      </p>
+      <div class="columns">
+        <div class="card">
+          <h3>Olive Oil</h3>
+          <p>
+            Extra virgin olive oil is the backbone of Greek cooking. It’s used for cooking,
+            dressing salads, drizzling over grilled vegetables, and even finishing soups.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Fresh Vegetables</h3>
+          <p>
+            Tomatoes, cucumbers, eggplants, peppers, onions, and leafy greens appear in
+            salads, stews, and baked dishes like moussaka and briam.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Cheese & Yogurt</h3>
+          <p>
+            Feta is the star, but you’ll also find graviera, kasseri, and manouri. Thick
+            strained Greek yogurt adds creaminess to sauces and desserts.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Herbs & Spices</h3>
+          <p>
+            Oregano, thyme, rosemary, dill, and mint give dishes their signature aroma,
+            often paired with garlic and lemon for brightness.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="dishes">
+      <h2>Iconic Greek Dishes You Should Know</h2>
+      <p>
+        These dishes show up again and again in Greek homes and tavernas. Each one tells a
+        story about the land, the climate, and the culture.
+      </p>
+
+      <h3>Greek Salad (Horiatiki)</h3>
+      <p>
+        A rustic salad of tomatoes, cucumbers, red onion, olives, green pepper, and a slab
+        of feta, dressed simply with olive oil and oregano. No lettuce—just pure, fresh
+        flavor.
+      </p>
+
+      <h3>Moussaka</h3>
+      <p>
+        A layered baked dish with eggplant, potatoes, spiced minced meat, and a creamy
+        béchamel topping. It’s rich, comforting, and perfect for a slow Sunday lunch.
+      </p>
+
+      <h3>Souvlaki</h3>
+      <p>
+        Skewers of marinated meat—often pork or chicken—grilled and served with pita,
+        onions, tomatoes, and tzatziki. Simple street food that feels like a full meal.
+      </p>
+
+      <h3>Gemista</h3>
+      <p>
+        Tomatoes and peppers stuffed with rice, herbs, and sometimes minced meat, baked
+        until tender. It’s a great example of how Greek cooking turns humble ingredients
+        into something special.
+      </p>
+    </section>
+
+    <section id="street">
+      <h2>Greek Street Food Culture</h2>
+      <p>
+        Street food in Greece is fast, affordable, and surprisingly balanced. You can grab
+        a quick bite and still feel like you’ve eaten a real meal.
+      </p>
+      <ul>
+        <li>
+          <strong>Gyros:</strong> Rotisserie meat shaved into pita with tomatoes, onions,
+          fries, and tzatziki.
+        </li>
+        <li>
+          <strong>Koulouri:</strong> Sesame-crusted bread rings, perfect for breakfast on
+          the go.
+        </li>
+        <li>
+          <strong>Bougatsa:</strong> Flaky pastry filled with custard or cheese, often
+          eaten warm with coffee.
+        </li>
+      </ul>
+    </section>
+
+    <section id="desserts">
+      <h2>Sweet Endings: Greek Desserts</h2>
+      <p>
+        Greek desserts lean heavily on honey, nuts, and flaky pastry. They’re sweet, but
+        often paired with coffee or tea to balance things out.
+      </p>
+      <ul>
+        <li>
+          <strong>Baklava:</strong> Layers of phyllo pastry, walnuts or pistachios, and
+          honey syrup.
+        </li>
+        <li>
+          <strong>Loukoumades:</strong> Little fried dough balls drizzled with honey and
+          cinnamon.
+        </li>
+        <li>
+          <strong>Galaktoboureko:</strong> Semolina custard wrapped in phyllo and soaked
+          in citrus syrup.
+        </li>
+      </ul>
+    </section>
+
+    <section id="tips">
+      <h2>Tips for Eating Like a Local</h2>
+      <p>
+        If you want to experience Greek food the way locals do, focus less on fancy
+        restaurants and more on everyday rituals.
+      </p>
+      <ul>
+        <li>
+          <strong>Share plates:</strong> Order several dishes for the table and taste a bit
+          of everything.
+        </li>
+        <li>
+          <strong>Follow the seasons:</strong> Ask what’s fresh—seasonal vegetables and
+          fish are usually the best choices.
+        </li>
+        <li>
+          <strong>Slow down:</strong> Meals are meant to be enjoyed slowly, with
+          conversation and company.
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Made with <span>olive oil &amp; love</span> — A simple blog about Greek food in HTML &amp; CSS.
+    </p>
+  </footer>
+</body>
+</html>
